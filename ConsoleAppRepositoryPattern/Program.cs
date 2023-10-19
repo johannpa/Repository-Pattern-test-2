@@ -9,6 +9,8 @@ namespace ConsoleAppRepositoryPattern
         static void Main(string[] args)
         {
             var repository = new BookRepository();
+
+            // Get Error here in new BookService without an other constructor in BookService
             var service = new BookService(repository);
 
             service.AddBook(new Book("Harry Potter"));

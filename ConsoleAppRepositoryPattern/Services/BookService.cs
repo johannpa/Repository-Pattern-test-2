@@ -1,16 +1,19 @@
 ﻿using ConsoleAppRepositoryPattern.Entities;
+using ConsoleAppRepositoryPattern.Infrastructure;
 using ConsoleAppRepositoryPattern.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleAppRepositoryPattern.Services
 {
     public class BookService
     {
         private readonly IRepository<Book> _bookRepository;
+        private BookRepository _repository;
+
+        // Make this to avoid the Error in program.cs but is it good
+        public BookService(BookRepository repository)
+        {
+            _repository = repository;
+        }
 
         private BookService(IRepository<Book> bookRepository)
         {

@@ -12,21 +12,25 @@ namespace ConsoleAppRepositoryPattern.Infrastructure
     {
         public void Add(Book entity)
         {
+            //Add logic
             throw new NotImplementedException();
         }
 
         public void Delete(Book entity)
         {
+            //Delete logic
             throw new NotImplementedException();
         }
 
         public Book Get(Guid id)
         {
+            //Get logic
             throw new NotImplementedException();
         }
 
         public void Update(Book entity)
         {
+            //Update logic
             throw new NotImplementedException();
         }
     }
